@@ -3,7 +3,7 @@ import { GET_ITEMS, GET_ITEM, ADD_ITEM, EDIT_ITEM, DEL_ITEM, ITEMS_LOADING } fro
 const HOST = process.env.REACT_APP_API_HOST;
 
 export const getItems = () => dispatch => {
-    console.log("GET_ITEMS ACTION")
+    console.log("GET_ITEMS ACTION");
     dispatch(itemsLoading());
     axios.get(`${HOST}/items`).then(res => dispatch({
         type: GET_ITEMS,
